@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1204px;
+    margin: 0 auto;
+    font-family: $font-old;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.media {
+    display: flex;
+    gap: 29px;
+}
+
+.content-number {
+    font-size: $font-size-lg;
+
+}
+
+.footer-t {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.media {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    margin-top: 20px;
+}

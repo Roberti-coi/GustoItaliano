@@ -1,0 +1,35 @@
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.ticker {
+    border-top: 2px solid $red;
+    border-bottom: 2px solid $red;
+    border-left: none;
+    border-right: none;
+    color: $red;
+    font-size: $font-size-lg;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ticker__in {
+    display: flex;
+    width: fit-content;
+    animation: ticker 10s linear infinite;
+    -webkit-transform-style: preserve-3d;
+    /* Фикс возможного глюка с морганием в Сафари */
+}
+
+.ticker__item {
+    padding: .5em 3.5em;
+    white-space: nowrap;
+    -webkit-backface-visibility: hidden;
+    /* Фикс возможного глюка с морганием в Сафари */
+}

@@ -1,0 +1,230 @@
+.reviews-section {
+    max-width: 1204px;
+    padding: 80px 20px 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    font-family: $font-old;
+}
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    font-family: $font-old;
+    font-weight: 700;
+    color: #333;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    position: relative;
+    align-items: start;
+}
+
+/* Общие стили для колонок */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Стили для карточек отзывов */
+.review-card {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 4px solid #d4a574;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.review-author {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    font-family: $font-old;
+    margin: 0;
+    color: #333;
+}
+
+.review-date {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    border-radius: 30px;
+    border: solid $black 1px;
+    padding: 10px 15px;
+    font-family: $font-old;
+    color: #333;
+}
+
+.review-text {
+    font-size: $font-size-lg;
+    line-height: 1.4;
+    margin: 0;
+    font-family: $font-old;
+    color: #555;
+    text-align: left;
+}
+
+/* Контейнер для отзыва с изображением */
+.review-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Текст отзыва без карточки */
+.review-content {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Изображения в оригинальных размерах */
+.review-image {
+    position: relative;
+    overflow: visible;
+    border-radius: 15px;
+    display: flex;
+}
+
+.review-image img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Левая колонка - изображения выходят за левый край */
+.left-column .review-image {
+    margin-left: -200px;
+    margin-right: 0;
+    justify-content: flex-start;
+}
+
+/* Правая колонка - изображения выходят за правый край */
+.right-column .review-image {
+    margin-right: -150px;
+    margin-left: 0;
+    justify-content: flex-end;
+}
+
+.right-column .review-image img {
+    margin-left: auto;
+}
+
+/* Специфичные стили для выравнивания */
+.left-column .review-with-image:first-child {
+    margin-top: 0;
+}
+
+.right-column .review-with-image:first-child {
+    margin-top: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .reviews-section {
+        max-width: 100%;
+        padding: 60px 20px 30px;
+    }
+
+    .left-column .review-image {
+        margin-left: -150px;
+    }
+
+    .right-column .review-image {
+        margin-right: -150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+
+    .left-column .review-image {
+        margin-left: -100px;
+    }
+
+    .right-column .review-image {
+        margin-right: -100px;
+    }
+
+    .review-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .left-column .review-image {
+        margin-left: -50px;
+    }
+
+    .right-column .review-image {
+        margin-right: -50px;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+    .left-column,
+    .right-column {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-section {
+        padding: 40px 15px 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .left-column .review-image {
+        margin-left: -30px;
+    }
+
+    .right-column .review-image {
+        margin-right: -30px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .review-date {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}

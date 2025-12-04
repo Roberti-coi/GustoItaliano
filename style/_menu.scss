@@ -1,0 +1,126 @@
+.prev-menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: $font-old;
+}
+
+.prev-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* Общие стили для колонок */
+.prev-left-column,
+.prev-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Заголовки блюд */
+.prev-menu-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.menu-name {
+    font-size: $font-size-sm;
+    color: #888;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: solid #555 1px;
+    padding: 10px 15px;
+}
+
+.menu-author {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    margin: 0;
+    color: $black;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+/* Описание блюда */
+.prev-menu-content {
+    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: left;
+}
+
+.prev-dish-description {
+    font-size: $font-size-lg;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    text-align: left;
+}
+
+/* Изображения */
+.prev-menu-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.prev-menu-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Заголовок секции */
+.prev-menu-section h2 {
+    text-align: center;
+    font-size: $font-size-xxl;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .prev-menu-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .prev-menu-image img {
+        max-height: 300px;
+    }
+
+    .menu-author {
+        font-size: $font-size-lg;
+    }
+
+    .prev-dish-description {
+        font-size: $font-size-sm;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev-menu-image img {
+        max-height: 250px;
+    }
+
+    .menu-author {
+        font-size: $font-size-md;
+    }
+
+    .prev-dish-description {
+        font-size: $font-size-sm;
+    }
+}
