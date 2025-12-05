@@ -1,9 +1,6 @@
 .container-about {
     display: flex;
     justify-content: space-between;
-    max-width: 1204px;
-    margin: 0 auto;
-    padding: 0px 20px;
 }
 
 .section-stat {
@@ -43,7 +40,7 @@
 
 .section-aboutus {
     flex: 1;
-    max-width: 850px;
+    max-width: clamp(320px, 59vw, 850px);
 }
 
 .about-content {

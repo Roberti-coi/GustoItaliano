@@ -46,10 +46,12 @@
 
 .header__container-image {
     position: absolute;
-    right: -200px;
-    top: 25%;
+    right: -250px;
+    top: 35%;
     transform: translateY(-50%);
     z-index: -1;
+    width: clamp(450px, 55vw, 1200px);
+    height: auto;
 }
 
 @keyframes spin {

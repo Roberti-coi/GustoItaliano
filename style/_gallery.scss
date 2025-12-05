@@ -10,17 +10,10 @@
     --shadow-heavy: rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    font-weight: 500;
-    margin-bottom: 2rem;
-}
-
-.gallery-container {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1.875rem;
-    max-width: 1204px;
-    margin: 0 auto;
 }
 
 .polaroid {

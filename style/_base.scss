@@ -2,10 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 
-
-
 .container {
-    max-width: 1204px;
+    max-width: clamp(320px, 83.6111vw, 1204px);
     display: flex;
     margin: 0 auto;
 }
@@ -25,6 +23,12 @@ body {
     font-family: $font-nun;
     text-transform: uppercase;
     position: relative;
+    border: 2px solid transparent;
+
+    &:hover {
+        background-color: #D32F15;
+        transform: translate(-9px, 11px);
+    }
 
     &::before {
         content: '';
@@ -37,9 +41,13 @@ body {
         border-radius: 15px;
         transform: translate(-9px, 11px);
         z-index: -1;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+        opacity: 0;
     }
 }
-
 
 //Заголовки
 .title {
@@ -61,6 +69,6 @@ body {
     transform: rotate(-90deg);
     white-space: nowrap;
     margin: 0;
-    margin-top: 300px; 
+    margin-top: 300px;
     flex-shrink: 0;
 }
